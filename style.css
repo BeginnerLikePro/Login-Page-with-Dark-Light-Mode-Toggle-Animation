@@ -1,0 +1,133 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", serif;
+}
+
+body {
+  margin: 0;
+}
+
+.main-window {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/imgs/light-bg.png");
+  background-size: cover;
+  transition: 0.7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-window.dark {
+  background-image: url("/imgs/dark-bg.png");
+}
+
+.switch-container {
+  width: 80px;
+  height: 40px;
+  background-image: url("imgs/LightToggle.png");
+  border-radius: 25px;
+  background-size: cover;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+}
+
+.switch-container.dark {
+  background-image: url("/imgs/DarkToggle.png");
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.4);
+}
+
+.switch-container .switch-btn {
+  width: 40px;
+  height: 40px;
+  background-image: url("/imgs/Sun.png");
+  border-radius: 100%;
+  background-size: cover;
+  position: absolute;
+  right: calc(100% - 45px);
+  transition: 0.7s;
+}
+
+.switch-container .switch-btn.dark {
+  background-image: url("/imgs/Moon.png");
+  right: 5px;
+}
+
+form {
+  width: 200px;
+  height: 230px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 14px 32px -4px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  border: 1px solid #2a9bcf25;
+}
+
+form .title {
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #708ba3;
+}
+
+form .title.dark {
+  color: #83a6c5;
+}
+
+form input {
+  width: 90%;
+  padding: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #2a9bcf67;
+}
+form input.dark {
+  color: #fff;
+  border: 1px solid #a2defa67;
+}
+form input::placeholder {
+  color: #708ba3;
+}
+
+form input.dark::placeholder {
+  color: #fff;
+}
+
+form button {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #2a9bc7f6;
+  color: #739ed6;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.1s;
+  padding: 5px;
+}
+
+form button.dark {
+  color: #fff;
+  border-color: #a2defa67;
+}
+
+form button:hover {
+  scale: 1.03;
+}
+
+form button:active {
+  scale: 0.99;
+}
